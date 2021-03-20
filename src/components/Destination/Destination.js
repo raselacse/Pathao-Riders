@@ -1,7 +1,5 @@
 import React from 'react';
-import { Button, Card, CardGroup, Col, Container, Row } from 'react-bootstrap';
-import hotel1 from '../../resources/hotels/Double.png'
-import hotel2 from '../../resources/hotels/Single.png'
+import { Col, Container, Row } from 'react-bootstrap';
 import LoggedInHeader from '../LoggedInHeader/LoggedInHeader';
 import './Destination.css'
 
@@ -13,34 +11,7 @@ const Destination = () => {
             <Container style={{ marginTop: '50px' }}>
                 <Row>
                     <Col xl={2}>
-                        {/* <CardGroup>
-                            <Card mr-3>
-                                <Card.Img variant="top" src={hotel1} />
 
-                                <Card.Title>Cox's Bazar Surf Club</Card.Title>
-
-                        This is a wider card with supporting text below as a natural lead-in .
-                        This is a wider card with supporting text below as a natural
-                        <Button>Book Now</Button>
-
-                            </Card>
-                            <Card className="ml-2">
-                                <Card.Img variant="top" src={hotel2} />
-
-                                <Card.Title>Grand Sultan Hotel & Spa</Card.Title>
-
-                        This is a wider card with supporting text below as a natural lead-in .This is a wider card with supporting text below as a natural
-                        <Button>Book Now</Button>
-                            </Card>
-                            <Card className="ml-2">
-                                <Card.Img variant="top" src={hotel2} />
-                                <Card.Title>Hotel Sea Cox</Card.Title>
-
-                        This is a wider card with supporting text below as a natural lead-in .
-                        This is a wider card with supporting text below as a natural
-                        <Button>Book Now</Button>
-                            </Card>
-                        </CardGroup> */}
                     </Col>
 
                     <Col xl={10}>

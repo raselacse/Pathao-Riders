@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Banner.css'
 import fakeData from '../../fakeData';
 import Home from '../Home/Home';
 import Slider from '../Slider/Slider';

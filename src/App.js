@@ -3,7 +3,7 @@ import NoMatch from './components/NoMatch/NoMatch'
 import './App.css';
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import Banner from './components/Banner/Banner';
-import Booking from './components/Booking/Booking';
+import SearchDestination from './components/SearchDestination/SearchDestination';
 import Destination from './components/Destination/Destination';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
@@ -23,8 +23,8 @@ function App() {
             <Route path="/home">
               <Banner/>
             </Route>
-            <Route path="/booking/:bookingId">
-              <Booking/>
+            <Route path="/search/:searchId">
+              <SearchDestination/>
             </Route>
             <Route path="/login">
               <Login/>

@@ -8,7 +8,7 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div className="header">
+        <div>
             <Container>
             <Row>
                 <Col>

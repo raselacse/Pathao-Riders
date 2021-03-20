@@ -44,7 +44,7 @@ const LoggedInHeader = () => {
     }
 
     return (
-        <div className="header">
+        <div>
             <Container>
                 <Row>
                     <Col>

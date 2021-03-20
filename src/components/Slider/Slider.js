@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, CardDeck } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
-
 import './Slider.css'
 
 const Slider = (props) => {
@@ -10,7 +9,7 @@ const Slider = (props) => {
     const history = useHistory();
 
     const handleBooking = () => {
-        history.push(`/booking/${id}`)
+        history.push(`/search/${id}`)
     }
 
 
