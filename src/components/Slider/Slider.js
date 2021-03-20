@@ -8,14 +8,14 @@ const Slider = (props) => {
 
     const history = useHistory();
 
-    const handleBooking = () => {
+   const handleSearch = () => {
         history.push(`/search/${id}`)
     }
 
 
     return (
         <CardDeck className="text-center col-md-6 col-lg-3">
-            <Card onClick={handleBooking} as={Link}>
+            <Card onClick={handleSearch} as={Link}>
                 <Card.Img variant="top w-75 m-auto" src={image} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>

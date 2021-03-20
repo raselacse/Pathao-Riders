@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import './SignUp.css'
-import Google from '../../resources/Icon/google.png'
+import Google from '../../images/google.png'
 import { UserContext } from '../../App'
 import { createUserWithEmailAndPassword, handleGoogleSignIn, initializeLoginFramework } from '../Login/LoginManager';
 import Home from '../Home/Home';

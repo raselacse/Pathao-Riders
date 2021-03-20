@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import { Link, useHistory, useLocation } from 'react-router-dom';
+import Google from '../../images/google.png'
 import './Login.css'
-import Google from '../../resources/Icon/google.png'
 import { UserContext } from '../../App'
 import { initializeLoginFramework, handleGoogleSignIn, handleSignOut, signInWithEmailAndPassword, resetPassword } from './LoginManager';
 import Home from '../Home/Home';

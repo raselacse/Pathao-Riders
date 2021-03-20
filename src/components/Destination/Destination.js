@@ -1,17 +1,46 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Form, Row } from 'react-bootstrap';
+import fakeData from '../../fakeData';
 import LoggedInHeader from '../LoggedInHeader/LoggedInHeader';
 import './Destination.css'
 
 
+
 const Destination = () => {
+    const url = fakeData;
+    console.log(url) 
+
     return (
         <div>
             <LoggedInHeader />
             <Container style={{ marginTop: '50px' }}>
                 <Row>
                     <Col xl={2}>
+                        <Form>
+                            <Form.Group>
+                                <Form.Label>Origin</Form.Label>
+                                <Form.Control style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="text" placeholder="" />
+                            </Form.Group>
 
+                            <Form.Group>
+                                <Form.Label>Destination</Form.Label>
+                                <Form.Control style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="text" placeholder="" />
+                            </Form.Group>
+                            <Row>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label>From</Form.Label>
+                                        <Form.Control style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="date" />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label>To</Form.Label>
+                                        <Form.Control style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="date" />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                        </Form>
                     </Col>
 
                     <Col xl={10}>
