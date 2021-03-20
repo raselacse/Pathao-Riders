@@ -1,12 +1,11 @@
 import React, { useContext, useState } from 'react';
-import { Col, Container, Form, Nav, Navbar, Row } from 'react-bootstrap';
+import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../images/Urban Riders.png'
 import './LoggedInHeader.css'
 import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App'
 import { handleSignOut, initializeLoginFramework } from '../Login/LoginManager';
-import { MDBCol } from "mdbreact";
 
 
 const LoggedInHeader = () => {

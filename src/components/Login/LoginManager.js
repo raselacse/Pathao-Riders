@@ -28,27 +28,6 @@ export const handleGoogleSignIn = () => {
     })
   }
 
-//   Handle FB Sign In
-export const handleFbSignIn = () => {
-    const fbProvider = new firebase.auth.FacebookAuthProvider();
-    return firebase.auth().signInWithPopup(fbProvider)
-    .then(res => {
-        const {displayName, photoURL, email} = res.user;
-        const signedInUser = {
-          isSignedIn: true,
-          name: displayName,
-          email: email,
-          photo: photoURL,
-          success: true
-        };
-        return signedInUser;
-      })
-      .catch(err => {
-        console.log(err);
-        console.log(err.message);
-      });
-  }
-
 //   Handle Sign Out
 export const handleSignOut = () => {
     return firebase.auth().signOut()
