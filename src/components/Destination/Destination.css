@@ -4,3 +4,33 @@
     border-radius: 5px;
     padding: 20px;
 }
+.destination-content{
+    background: #ecebeb;
+    padding: 3px 0px;
+    border-radius: 5px;
+}
+.destination{
+    margin: 10px;
+    padding: 10px;
+    background: bisque;
+}
+.rideInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    margin: 10px;
+    border-radius: 5px;
+}
+.rideInfo h6{
+    margin: 0;
+    padding: 5px;
+}
+.car{
+    height: 50px;
+    padding: 5px;
+}
+.peopleIcon{
+    height: 30px;
+    padding: 5px;
+}
