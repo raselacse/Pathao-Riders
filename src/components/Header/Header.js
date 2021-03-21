@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import background from '../../images/Bg.png';
+import background from '../../images/Bg.jpg';
 import logo from '../../images/pathao.png';
 import './Header.css'
 
@@ -13,8 +13,8 @@ const Header = () => {
             <Row>
                 <Col>
                     <Navbar expand="lg">
-                    <Link className="head-logo" to="/home"> <img src={logo} alt=""/> </Link>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Link className="head-logo" to="/home"> <img className="bg-light rounded" src={logo} alt=""/> </Link>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-dark"/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ml-auto">
                         <Link className="head-menu" to="/home">Home</Link>

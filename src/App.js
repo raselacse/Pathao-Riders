@@ -23,9 +23,9 @@ function App() {
             <Route path="/home">
               <Banner/>
             </Route>
-            <Route path="/search/:searchId">
+            <PrivateRoute path="/search/:searchId">
               <SearchDestination/>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login/>
             </Route>

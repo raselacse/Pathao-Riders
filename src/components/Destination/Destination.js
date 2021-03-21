@@ -1,30 +1,52 @@
-import React from 'react';
-import { Col, Container, Form, Row } from 'react-bootstrap';
-import fakeData from '../../fakeData';
+import React, { useContext } from 'react';
+import { Col, Container, Form, Nav, Navbar, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 import LoggedInHeader from '../LoggedInHeader/LoggedInHeader';
 import './Destination.css'
+import logo from '../../images/pathao.png';
 
 
 
-const Destination = () => {
-    const url = fakeData;
-    console.log(url) 
+const Destination = () => {   
+    const user = useContext(UserContext)
+    console.log(user)
+    const {displayName} = user[0];
 
     return (
         <div>
-            <LoggedInHeader />
+            {/* <LoggedInHeader/> */}
+            <Container>
+                <Row>
+                    <Col>
+                        <Navbar expand="lg">
+                            <Link className="login-head-logo" to="/home"> <img src={logo} alt="" /> </Link>
+                            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                            <Navbar.Collapse id="basic-navbar-nav">
+                                <Nav className="ml-auto">
+                                    <Link className="login-head-menu" to="/home">Home</Link>
+                                    <Link className="login-head-menu" to="/destination">Destination</Link>
+                                    <Link className="login-head-menu" to="/blog">Blog</Link>
+                                    <Link className="login-head-menu" to="/contact">Contact</Link>
+                                    <button className="login-head-button" type="submit">{displayName}</button>
+                                </Nav>
+                            </Navbar.Collapse>
+                        </Navbar>
+                    </Col>
+                </Row>
+            </Container>
             <Container style={{ marginTop: '50px' }}>
                 <Row>
                     <Col xl={2}>
                         <Form>
                             <Form.Group>
                                 <Form.Label>Origin</Form.Label>
-                                <Form.Control style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="text" placeholder="" />
+                                <Form.Control style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="text" placeholder="Gazipur" />
                             </Form.Group>
 
                             <Form.Group>
                                 <Form.Label>Destination</Form.Label>
-                                <Form.Control style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="text" placeholder="" />
+                                <Form.Control style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="text" placeholder="Savar" />
                             </Form.Group>
                             <Row>
                                 <Col>

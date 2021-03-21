@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import logo from '../../images/Urban Riders.png'
+import logo from '../../images/pathao.png'
 import './LoggedInHeader.css'
 import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App'

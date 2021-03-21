@@ -3,7 +3,8 @@ import { Col, Container, Form, Row } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import fakeData from '../../fakeData';
 import Home from '../Home/Home';
-import './SearchDestination.css'
+import './SearchDestination.css';
+
 
 const SearchDestination = () => {
     const { searchId } = useParams();
@@ -11,35 +12,39 @@ const SearchDestination = () => {
     const url = fakeData;
 
     const placeDetails = url.filter(place => place.id == searchId)
-    // const {name} = placeDetails[0]; 
+    const {name} = placeDetails[0]; 
+
+    const getUserInput = (e) =>{
+        
+    }
 
     return (
         <div>
-            <Home />
+            <Home/>
             <Container className="search">
                 <Row>
                     <Col xl={4} className="form-part h-100">
                         <Form>
                             <Form.Group>
                                 <Form.Label>Origin</Form.Label>
-                                <Form.Control style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="text" />
+                                <Form.Control onBlur={getUserInput} style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="text" name="origin" required/>
                             </Form.Group>
 
                             <Form.Group>
                                 <Form.Label>Destination</Form.Label>
-                                <Form.Control style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="text" />
+                                <Form.Control onBlur={getUserInput} style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="text" name="destination" required/>
                             </Form.Group>
                             <Row>
                                 <Col>
                                     <Form.Group>
                                         <Form.Label>From</Form.Label>
-                                        <Form.Control style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="date" />
+                                        <Form.Control onBlur={getUserInput} style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="date" name="from" required/>
                                     </Form.Group>
                                 </Col>
                                 <Col>
                                     <Form.Group>
                                         <Form.Label>To</Form.Label>
-                                        <Form.Control style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="date" />
+                                        <Form.Control onBlur={getUserInput} style={{ backgroundColor: 'rgba(230, 230, 230, 0.616)' }} type="date" name="to" required/>
                                     </Form.Group>
                                 </Col>
                             </Row>
