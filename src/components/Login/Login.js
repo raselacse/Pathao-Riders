@@ -4,7 +4,7 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import Google from '../../images/google.png'
 import './Login.css'
 import { UserContext } from '../../App'
-import { initializeLoginFramework, handleGoogleSignIn, handleSignOut, signInWithEmailAndPassword, resetPassword } from './LoginManager';
+import { initializeLoginFramework, handleGoogleSignIn, handleSignOut, signInWithEmailAndPassword, resetPassword } from '../Login/LoginManager';
 import Home from '../Home/Home';
 
 
@@ -119,7 +119,7 @@ const Login = () => {
                         </div>
 
                         <div className="login-alternative">
-                            <button className="text-light" onClick={googleSignIn}><img src={Google} alt="" />Continue with Google</button>
+                            <button onClick={googleSignIn}><img src={Google} alt="" />Continue with Google</button>
                         </div>
 
                         <p style={{ color: 'red', textAlign: 'center' }}>{user.error}</p>
